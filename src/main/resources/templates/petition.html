@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Petition</title>
+</head>
+<body>
+<h1 th:text="${petition.title}"></h1>
+<p th:text="${petition.description}"></p>
+<p>Signatures: <span th:text="${petition.signatureCount}"></span></p>
+<form action="#" method="post">
+    <label>
+        <input type="text" name="name" placeholder="Your Name" required>
+    </label>
+    <label>
+        <input type="email" name="email" placeholder="Your Email" required>
+    </label>
+    <button type="submit">Sign Petition</button>
+</form>
+</body>
+</html>

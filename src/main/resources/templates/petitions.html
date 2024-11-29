@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Petitions</title>
+</head>
+<body>
+<h1>Petitions</h1>
+<a href="/petitions/new">Create New Petition</a>
+<form action="/petitions/search" method="get">
+    <input type="text" name="keyword" placeholder="Search petitions">
+    <button type="submit">Search</button>
+</form>
+<ul>
+    <li th:each="petition : ${petitions}">
+        <a th:href="@{/petitions/{id}(id=${petition.id})}" th:text="${petition.title}"></a>
+    </li>
+</ul>
+</body>
+</html>
